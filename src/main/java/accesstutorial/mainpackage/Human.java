@@ -9,4 +9,9 @@ package accesstutorial.mainpackage;
 // Human is default
 class Human {
     String age;
+
+    class abc{
+        int bc;
+    }
+
 }
