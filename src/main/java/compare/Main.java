@@ -23,8 +23,14 @@ public class Main {
                 else return -1;
         };
 
-        //use of Function as FI
+        //use of Function as FI (both exactly the same)
         Function<Integer, String> F = (x)-> "Ashish";
+        Function<Integer, String> F2 = new Function<Integer, String>() {
+            @Override
+            public String apply(Integer integer) {
+                return "Ashish";
+            }
+        };
 
         System.out.println(F.apply(23));
 
