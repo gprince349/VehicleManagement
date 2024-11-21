@@ -1,0 +1,37 @@
+Parking Lot LLD problem-
+
+Flow-
+Vehicle -> EntryGate -> Parking Spot -> Payment -> Exit
+
+QnA-
+- how many gates (entry/exit)
+- how many spots
+- does 2 wheeler/ 4 wheeler spots
+- can it be reserved though empty
+- can we have multiple payment options?
+- prepaid / post paid option
+- ticket counter (if prepaid)
+- rate hourly/minute based or one time? --> mixture
+- can it has floors - no
+
+
+Objects-
+- ParkingLot (has all spots & gates & controls)
+- Vehicles (car, bike): num, type(enum)
+- EntryGate: (allowedVehicles, state, | find parking space, update space, generate ticket)
+- ExitGate: ( cost calculation, payment verification, open/close state, update parking spot)
+- PaymentDesk (payment options)
+- Barrier (open/close)
+- Ticket (for parking) -> (spot no, entrytimestamp, rate, ticketId)
+- ParkingSpot (id, isAvailable, Vehicle, type(enum), rate(based on vehicle type))
+
+
+Approach-1 : Top down
+-----------------------------------------------------------
+Start from parent go to child
+
+
+Approach-2: Bottom up
+-----------------------------------------------------------
+Start from parking spots (child classs) and use it in parents
+
